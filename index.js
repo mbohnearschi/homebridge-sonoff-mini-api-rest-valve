@@ -47,24 +47,38 @@ function SonoffAccessory(log, config) {
       this.is_valve = true;
       break;
   }
-
-  switch (this.valve_type) {
-    case default:
-    case "generic":
-      this.valve_type = Characteristic.ValveType.GENERIC_VALVE;
-      break;
-    case "irrigation":
-      this.valve_type = Characteristic.ValveType.IRRIGATION;
-      break;
-    case "shower_head":
-      this.valve_type = Characteristic.ValveType.SHOWER_HEAD;
-      break;
-    case "water_faucet":
-      this.valve_type = Characteristic.ValveType.WATER_FAUCET;
-      break;
+  
+  if (this.debug) {
+    this.log('Type: ' + this.type);
+    this.log('Is valve: ' + this.is_valve);
   }
 
   if (this.is_valve) {
+
+    if (this.debug) {
+      this.log('Valve type: ' + this.valve_type);
+    }
+  
+    switch (this.valve_type) {
+      case default:
+      case "generic":
+        this.valve_type = Characteristic.ValveType.GENERIC_VALVE;
+        break;
+      case "irrigation":
+        this.valve_type = Characteristic.ValveType.IRRIGATION;
+        break;
+      case "shower_head":
+        this.valve_type = Characteristic.ValveType.SHOWER_HEAD;
+        break;
+      case "water_faucet":
+        this.valve_type = Characteristic.ValveType.WATER_FAUCET;
+        break;
+    }
+
+    if (this.debug) {
+      this.log('Valve type id: ' + this.valve_type);
+    }
+    
     this.service
       .getCharacteristic(Characteristic.Active)
       .on('get', this.getStateInt8.bind(this))
