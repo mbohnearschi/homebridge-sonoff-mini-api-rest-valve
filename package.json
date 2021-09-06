@@ -5,8 +5,8 @@
   "main": "index.js",
   "author": "Alexandr Usoltsev",
   "contributors": [
-    "Simone Gasparini",
-  ]
+    "Simone Gasparini"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/myroom/homebridge-sonoff-mini-api-rest.git"
