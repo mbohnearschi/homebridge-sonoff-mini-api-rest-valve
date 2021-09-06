@@ -1,6 +1,6 @@
 {
   "name": "homebridge-sonoff-mini-api-rest-valve",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Plugin for Sonoff Mini REST API with Valve: https://github.com/simone-gasparini/homebridge-sonoff-mini-api-rest-valve",
   "main": "index.js",
   "author": "Alexandr Usoltsev",
