@@ -19,6 +19,8 @@ function SonoffAccessory(log, config) {
   this.id = config["id"];
   this.url = config["url"];
   this.debug = config.debug || false;
+  this.type = config["type"];
+  this.valve_type = config["valve_type"];
   this.is_valve = false;
 
   // old version config
@@ -26,14 +28,11 @@ function SonoffAccessory(log, config) {
     this.url = config["uri"];
   }
 
-  if(this.type === undefined) {
-    this.type = "switch";
-  }
-
   switch (this.type) {
     case "fan":
       this.service = new Service.Fan(this.name);
       break;
+    case default:
     case "lightbulb":
       this.service = new Service.Lightbulb(this.name);
       break;
@@ -49,11 +48,8 @@ function SonoffAccessory(log, config) {
       break;
   }
 
-  if(this.valve_type === undefined) {
-    this.valve_type = "generic";
-  }
-
   switch (this.valve_type) {
+    case default:
     case "generic":
       this.valve_type = Characteristic.ValveType.GENERIC_VALVE;
       break;
