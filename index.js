@@ -32,7 +32,7 @@ function SonoffAccessory(log, config) {
     case "fan":
       this.service = new Service.Fan(this.name);
       break;
-    case default:
+    default:
     case "lightbulb":
       this.service = new Service.Lightbulb(this.name);
       break;
@@ -60,7 +60,7 @@ function SonoffAccessory(log, config) {
     }
   
     switch (this.valve_type) {
-      case default:
+      default:
       case "generic":
         this.valve_type = Characteristic.ValveType.GENERIC_VALVE;
         break;
