@@ -1,8 +1,8 @@
-[![npm](https://badgen.net/npm/v/homebridge-sonoff-mini-api-rest/latest)](https://www.npmjs.com/package/homebridge-sonoff-mini-api-rest)
-[![npm](https://badgen.net/npm/dt/homebridge-sonoff-mini-api-rest)](https://www.npmjs.com/package/homebridge-sonoff-mini-api-rest)
+[![npm](https://badgen.net/npm/v/homebridge-sonoff-mini-diy-rest/latest)](https://www.npmjs.com/package/homebridge-sonoff-mini-diy-rest)
+[![npm](https://badgen.net/npm/dt/homebridge-sonoff-mini-diy-rest)](https://www.npmjs.com/package/homebridge-sonoff-mini-diy-rest)
 
 
-# homebridge-sonoff-mini-api-rest
+# homebridge-sonoff-mini-diy-rest
 
 <a href="https://www.buymeacoffee.com/myroom" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
@@ -41,4 +41,4 @@ Chances are you are going to need sudo with that.
 
 ## Issues
 
-This software comes with no warranty. It works for me and it might for you.
+This software comes with no warranty. At least now it works, PRs welcome.
