@@ -7,7 +7,7 @@ module.exports = function(homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
   
-  homebridge.registerAccessory("homebridge-sonoff-mini-api-rest", "Sonoff", SonoffAccessory);
+  homebridge.registerAccessory("homebridge-sonoff-mini-diy-rest", "Sonoff", SonoffAccessory);
 }
 
 
