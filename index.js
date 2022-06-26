@@ -109,7 +109,7 @@ SonoffAccessory.prototype.getStateBool = function(callback) {
   .end((error, response) => {
     if (!error && response.statusCode == 200) {
       var json = JSON.parse(response.text).data;
-      var state = JSON.parse(json).switch;
+      var state = json.switch;
 
       if (this.debug)           
           this.log('getState() request returned successfully ('+response.statusCode+'). Body: '+JSON.stringify(json));
